@@ -1,0 +1,9 @@
+---
+- hosts: nodeservers 
+  become: True
+  tasks:
+    - name: Disk utilization.
+      shell: df -h 
+    - name: Memory utilization
+      shell: free -m     
+...
