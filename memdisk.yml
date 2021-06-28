@@ -1,9 +1,7 @@
----
-- hosts: nodeservers 
-  become: True
+- name: Test commands
+  hosts: localhost
+  connection: local
+  gather_facts: false
   tasks:
-    - name: Disk utilization.
-      shell: df -h 
-    - name: Memory utilization
-      shell: free -m     
-...
+    - name: Test local action
+      command: echo "hello world"
