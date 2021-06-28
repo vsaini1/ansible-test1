@@ -3,5 +3,7 @@
   connection: local
   gather_facts: false
   tasks:
-    - name: Test local action
-      command: echo "hello world"
+    - name: Disk utilization.
+      shell: df -h 
+    - name: Memory utilization
+      shell: free -m     
